@@ -1,7 +1,6 @@
 .App {
   width: 1280px;
   height: 100vh;
-  text-align: center;
 }
 .app-header {
   height: 80px;
@@ -11,4 +10,5 @@
 }
 .app-body {
   height: 100%;
+  margin: 80px;
 }
