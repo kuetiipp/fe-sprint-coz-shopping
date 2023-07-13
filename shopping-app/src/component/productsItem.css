@@ -1,0 +1,19 @@
+.product {
+    flex-grow: 1;
+    padding-bottom: 40px;
+}
+.products-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+.products-content:nth-child(n+2){
+    padding-left: 25px;
+}
+
+.products-content {
+    width: 100%;
+    height: 210px;
+    flex-grow: 1;
+}
