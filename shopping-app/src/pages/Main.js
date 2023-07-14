@@ -15,7 +15,6 @@ const Main = () => {
         setProductsItem(response.data);
       });
   }, []);
-
   return (
     <div className="main">
       <ProductsItem productsItem={productsItem} />
