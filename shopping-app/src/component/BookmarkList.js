@@ -4,7 +4,7 @@ import "./bookmarkItem.css";
 export default function BookmarkList({ productsItem }) {
   return (
     <div className="bookmark">
-      <div>북마크 리스트</div>
+      <div className="bookmark-title">북마크 리스트(임시)</div>
       <div key={productsItem.id} className="bookmark-container">
         {productsItem.map((products, idx) => {
           if (idx < 4) {
@@ -23,9 +23,9 @@ export default function BookmarkList({ productsItem }) {
                 </div>
                 <span className="bookmark-name">{products.title}</span>
                 <span className="discount-or-follower">
-                  {products.dicountPercentage === null
+                  {products.discountPercentage === null
                     ? `관심고객수`
-                    : products.dicountPercentage}
+                    : products.discountPercentage}
                 </span>
                 <span className="bookmark-sub-title">{products.sub_title}</span>
                 <span className="bookmark-price-or-like">

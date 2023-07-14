@@ -1,0 +1,14 @@
+.sort {
+    border: 1px solid saddlebrown;
+}
+.filter-button-container {
+    display: flex;
+    flex-direction: row;
+    width: 554px;
+    height: 122px;
+}
+.filter-btn-content {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}

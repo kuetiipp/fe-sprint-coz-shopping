@@ -4,10 +4,9 @@ import "./productsItem.css";
 export default function ProductsItem({ productsItem }) {
   return (
     <div className="product">
-      <div>상품 리스트</div>
-
+      <div className="product-title">상품 리스트</div>
       <div key={productsItem.id} className="products-container">
-        {productsItem.map((products, idx) => {
+        {productsItem && productsItem.map((products, idx) => {
           if (idx < 4) {
             return (
               <div key={products.id} className="products-content">
@@ -22,16 +21,29 @@ export default function ProductsItem({ productsItem }) {
                     alt={products.title}
                   ></img>
                 </div>
-                <span className="products-name">{products.title}</span>
-                <span className="discount-or-follower">
-                  {products.dicountPercentage === null
-                    ? `관심고객수`
-                    : products.dicountPercentage}
-                </span>
-                <span className="products-sub-title">{products.sub_title}</span>
-                <span className="products-price-or-like">
-                  {products.price === null ? products.follower : products.price}
-                </span>
+                <div className="product-content-info">
+                  <div className="product-info-left">
+                    <span className="products-name">{products.title}</span>
+                    <span className="products-sub-title">
+                      {products.sub_title}
+                    </span>
+                  </div>
+                  <div className="product-info-right">
+                    {products.discountPercentage &&
+                      <span className="discount">
+                        {products.discountPercentage}%
+                      </span>
+                    }
+                    {products.follower &&
+                      <span className="follower">관심고객수</span>
+                    }
+                    {products.price === null ? (
+                      <span>{products.follower}</span>
+                    ) : (
+                      <span>{products.price}원</span>
+                    )}
+                  </div>
+                </div>
                 {/* <button
               className="products-button"
               onClick={(e) => handleClick(e, item.id)}

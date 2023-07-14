@@ -6,24 +6,20 @@ import ProductsItem from "../component/ProductsItem";
 import BookmarkList from "../component/BookmarkList";
 
 const Main = () => {
-    const [productsItem, setProductsItem] = useState([]);
+  const [productsItem, setProductsItem] = useState([]);
 
-    useEffect(() => {
-        axios.get('http://cozshopping.codestates-seb.link/api/v1/products')
-            .then(response => {
-                setProductsItem(response.data);
-            });
-    }, []); 
-    
-  
-
-
+  useEffect(() => {
+    axios
+      .get("http://cozshopping.codestates-seb.link/api/v1/products")
+      .then((response) => {
+        setProductsItem(response.data);
+      });
+  }, []);
 
   return (
     <div className="main">
-        <ProductsItem productsItem={productsItem}/>
-        <BookmarkList productsItem={productsItem}/>
-      
+      <ProductsItem productsItem={productsItem} />
+      <BookmarkList productsItem={productsItem} />
     </div>
   );
 };
