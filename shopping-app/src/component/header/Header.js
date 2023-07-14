@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import { useState } from "react";
-import Dropdown from "./Dropdown";
+import Dropdown from "../Dropdown";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
   const xUrl = "/x.png";
 
   return (
-    <div className="header">
+    <header className="header">
       <Link to="/">
         <img className="header-logo" src={logoUrl} alt="logo"></img>
       </Link>
@@ -29,7 +29,7 @@ const Header = () => {
         )}
       </button>
       {isMenuOpen && <Dropdown />}
-    </div>
+    </header>
   );
 };
 
