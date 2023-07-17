@@ -2,12 +2,13 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
-import ProductsList from "./pages/ProductsList";
+import ProductsList from "./pages/ProductsPage/ProductsList";
 import Bookmark from "./pages/Bookmark";
 import Header from "./component/header/Header";
 import Footer from "./component/footer/Footer";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="App">

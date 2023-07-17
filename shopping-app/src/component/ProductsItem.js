@@ -7,6 +7,7 @@ export default function ProductsItem({ productsItem }) {
       <div className="product-title">상품 리스트</div>
       <div key={productsItem.id} className="products-container">
         {productsItem && productsItem.map((products, idx) => {
+          if(idx < 4){
             return (
               <div key={products.id} className="products-content">
                 <div className="img-wrapper">
@@ -44,7 +45,7 @@ export default function ProductsItem({ productsItem }) {
                   </div>
                 </div>
               </div>
-            );
+            );}
         })}
       </div>
     </div>

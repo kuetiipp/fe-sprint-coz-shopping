@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import { useState } from "react";
 import Dropdown from "../Dropdown";
+import logoUrl from "./logo.png";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +13,6 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const logoUrl = "/logo.png";
   const menuLogoUrl = "/dropdown.png";
   const xUrl = "/x.png";
 
