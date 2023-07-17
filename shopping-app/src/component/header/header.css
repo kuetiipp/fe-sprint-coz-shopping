@@ -39,4 +39,5 @@
     height: 172px;
     right: 10px;
     top: 50px;
+    z-index: 1;
 }

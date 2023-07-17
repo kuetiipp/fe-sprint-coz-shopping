@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import ProductsItem from "../component/ProductsItem";
 import BookmarkList from "../component/BookmarkList";
 
-const Main = () => {
+const Main = ({ modalHandler }) => {
   const [productsItem, setProductsItem] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Main = () => {
   }, []);
   return (
     <div className="main">
-      <ProductsItem productsItem={productsItem} />
+      <ProductsItem productsItem={productsItem} modalHandler={modalHandler}/>
       <BookmarkList productsItem={productsItem} />
     </div>
   );
