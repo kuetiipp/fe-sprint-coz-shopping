@@ -46,6 +46,7 @@ export default function ProductsItem({ productsItem }) {
       >
         <div className="modal-img">
           <img src={clickedImg} alt=""></img>
+          <button className="x-btn" onClick={modalHandler}>X</button>
         </div>
       </ReactModal>
       <div className="product-title">상품 리스트</div>
@@ -71,6 +72,7 @@ export default function ProductsItem({ productsItem }) {
                             : products.image_url
                         }
                       ></img>
+                      <div></div>
                     </div>
                     <div className="product-content-info">
                       <div className="product-info-left">

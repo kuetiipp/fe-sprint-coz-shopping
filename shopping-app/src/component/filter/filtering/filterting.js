@@ -1,5 +1,5 @@
 import React from "react";
-import "/Users/pchoo/fe-sprint-coz-shopping/shopping-app/src/component/productsItem.css";
+import "/Users/pchoo/fe-sprint-coz-shopping/shopping-app/src/component/productlist/productsItem.css";
 
 function Filtering({ productsItem, name }) {
   return (
@@ -23,7 +23,7 @@ function Filtering({ productsItem, name }) {
                   </div>
                   <div className="product-content-info">
                     <div className="product-info-left">
-                      <span className="products-name">{product.title}</span>
+                      <span className="products-name">{product.type === "Category" ? "#" + product.title : product.title}</span>
                       <span className="products-sub-title">
                         {product.sub_title}
                       </span>

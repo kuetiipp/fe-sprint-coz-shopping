@@ -67,4 +67,12 @@
     height: 100%;
     border-radius: 10px;
 }
+.x-btn {
+    position: fixed;
+    font-size: 30px;
+    color: white;
+    top: 110px;
+    right: 230px;
+    background-color: rgba(255, 255, 255, 0);
+}
 

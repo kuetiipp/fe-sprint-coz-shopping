@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-import ProductsItem from "../component/ProductsItem";
-import BookmarkList from "../component/BookmarkList";
+import ProductsItem from "../component/productlist/ProductsItem";
+import BookmarkList from "../component/bookmark/BookmarkList";
 
 const Main = ({ modalHandler }) => {
   const [productsItem, setProductsItem] = useState([]);
